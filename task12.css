@@ -1,0 +1,141 @@
+/* General Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Header */
+header {
+  background-color: #2c3e50;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav li {
+  color: #ecf0f1;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav li:hover {
+  color: #f39c12;
+}
+
+/* Jumbotron */
+.jumbotron {
+  height: 800px;
+  background-image: url("http://s3.amazonaws.com/codecademy-content/projects/broadway/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-size: 70px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.btn-main {
+  background-color: #f39c12;
+  color: #fff;
+  padding: 16px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-main:hover {
+  background-color: #e67e22;
+}
+
+/* Supporting Section */
+.supporting {
+  padding: 80px 0;
+  background-color: #ecf0f1;
+}
+
+.supporting .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.supporting .col {
+  text-align: center;
+  width: 200px;
+  margin: 20px;
+}
+
+.supporting img {
+  height: 64px;
+  margin-bottom: 20px;
+}
+
+.supporting h2 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.supporting p {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.btn-default {
+  background-color: #fff;
+  color: #2c3e50;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 2px solid #2c3e50;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-default:hover {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
