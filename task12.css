@@ -1,18 +1,18 @@
-/* General Reset */
 html, body {
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #fff;
 }
 
-/* Header */
 header {
-  background-color: #2c3e50;
+  background: linear-gradient(90deg, #2c3e50, #34495e);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 
 nav ul {
@@ -25,21 +25,21 @@ nav ul {
 
 nav li {
   color: #ecf0f1;
-  font-weight: 600;
-  font-size: 14px;
-  margin: 0 20px;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0 25px;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 nav li:hover {
-  color: #f39c12;
+  color: #ff7f50;
+  transform: scale(1.1);
 }
 
-/* Jumbotron */
 .jumbotron {
-  height: 800px;
-  background-image: url("http://s3.amazonaws.com/codecademy-content/projects/broadway/bg.jpg");
+  height: 100vh;
+  background: linear-gradient(rgba(44,62,80,0.5), rgba(44,62,80,0.5)), url("http://s3.amazonaws.com/codecademy-content/projects/broadway/bg.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -47,55 +47,68 @@ nav li:hover {
   justify-content: center;
   color: #fff;
   text-align: center;
+  flex-direction: column;
 }
 
 .jumbotron h1 {
-  font-size: 70px;
+  font-size: 64px;
   text-transform: uppercase;
-  margin: 0;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  animation: fadeInDown 1s ease-out;
 }
 
 .btn-main {
-  background-color: #f39c12;
+  background-color: #ff7f50;
   color: #fff;
   padding: 16px 40px;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .btn-main:hover {
-  background-color: #e67e22;
+  background-color: #e25b35;
+  transform: scale(1.05);
 }
 
-/* Supporting Section */
 .supporting {
-  padding: 80px 0;
-  background-color: #ecf0f1;
+  padding: 100px 0;
+  background-color: #f5f5f5;
 }
 
 .supporting .container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  gap: 40px;
 }
 
 .supporting .col {
+  background-color: #fff;
+  padding: 30px;
   text-align: center;
-  width: 200px;
-  margin: 20px;
+  width: 260px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.supporting .col:hover {
+  transform: translateY(-10px);
 }
 
 .supporting img {
-  height: 64px;
+  height: 72px;
   margin-bottom: 20px;
 }
 
 .supporting h2 {
-  font-size: 20px;
+  font-size: 24px;
   color: #2c3e50;
   margin-bottom: 10px;
 }
@@ -104,17 +117,18 @@ nav li:hover {
   font-size: 14px;
   color: #7f8c8d;
   margin-bottom: 20px;
+  line-height: 1.6;
 }
 
 .btn-default {
-  background-color: #fff;
+  background-color: transparent;
   color: #2c3e50;
-  padding: 10px 20px;
+  padding: 10px 22px;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
   border: 2px solid #2c3e50;
-  border-radius: 5px;
+  border-radius: 25px;
   transition: all 0.3s ease;
 }
 
@@ -123,9 +137,8 @@ nav li:hover {
   color: #fff;
 }
 
-/* Footer */
 footer {
-  background-color: #2c3e50;
+  background: linear-gradient(90deg, #2c3e50, #34495e);
   color: #ecf0f1;
   text-align: center;
   padding: 20px 0;
@@ -138,4 +151,30 @@ footer p {
   margin: 0;
   font-size: 12px;
   text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .jumbotron h1 {
+    font-size: 40px;
+  }
+
+  .supporting .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .supporting .col {
+    width: 90%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
